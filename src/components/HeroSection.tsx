@@ -1,7 +1,12 @@
 import { personalInfo } from "@/lib/data";
-import { Mail, Github, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+  IconMapPin,
+} from "@tabler/icons-react";
 
 export default function HeroSection() {
   const containerVariants = {
@@ -41,14 +46,13 @@ export default function HeroSection() {
               variants={childVariants}
             >
               {personalInfo.name}{" "}
-              <span className="inline-block animate-pulse">✨</span>
             </motion.h1>
 
             <motion.p
               className="text-xl text-muted-foreground mb-6"
               variants={childVariants}
             >
-              Software Engineer 👨‍💻
+              Software Engineer
             </motion.p>
 
             <motion.div
@@ -60,8 +64,8 @@ export default function HeroSection() {
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
               >
-                <MapPin className="h-4 w-4 mr-2" />
-                📍 {personalInfo.location}
+                <IconMapPin className="h-5 w-5 mr-2" stroke={1.5} />
+                {personalInfo.location}
               </motion.div>
 
               <motion.a
@@ -70,8 +74,8 @@ export default function HeroSection() {
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
               >
-                <Mail className="h-4 w-4 mr-2" />
-                ✉️ {personalInfo.email}
+                <IconMail className="h-5 w-5 mr-2" stroke={1.5} />
+                {personalInfo.email}
               </motion.a>
 
               <motion.a
@@ -82,8 +86,8 @@ export default function HeroSection() {
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
               >
-                <Github className="h-4 w-4 mr-2" />
-                🌟 GitHub
+                <IconBrandGithub className="h-5 w-5 mr-2" stroke={1.5} />
+                GitHub
               </motion.a>
 
               <motion.a
@@ -94,8 +98,8 @@ export default function HeroSection() {
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
               >
-                <Linkedin className="h-4 w-4 mr-2" />
-                🔗 LinkedIn
+                <IconBrandLinkedin className="h-5 w-5 mr-2" stroke={1.5} />
+                LinkedIn
               </motion.a>
             </motion.div>
           </div>
@@ -107,11 +111,11 @@ export default function HeroSection() {
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <img
                 src="/profile.jpg"
                 alt="Profile"
-                className="w-48 md:w-60 rounded-full relative ring-2 ring-purple-500/50"
+                className="w-48 md:w-60 rounded-full relative ring-2 ring-blue-500/50"
                 style={{ objectFit: "cover" }}
               />
             </div>
@@ -119,18 +123,18 @@ export default function HeroSection() {
         </motion.div>
 
         <MotionWrapper>
-          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-purple-500/20 dark:border-purple-500/10 shadow-sm">
+          <div className="bg-gradient-to-r from-blue-500/10 to-sky-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-blue-500/20 dark:border-blue-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
-              <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
-              🚀 Passionate software engineer with a versatile skill set
-              spanning multiple domains. I thrive on solving complex challenges
-              across different platforms and environments, adapting quickly to
-              new technologies and methodologies. My holistic approach combines
-              technical expertise with creative problem-solving, allowing me to
-              develop solutions that are both innovative and practical. I'm
-              driven by continuous learning and a commitment to excellence,
-              whether working independently or collaborating with diverse teams
-              to create impactful, scalable solutions.
+              <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500 to-sky-500 rounded-full"></span>
+              Soy un ingeniero de software especializado en desarrollo full
+              stack con 6 años de experiencia en la creación de soluciones
+              tecnológicas innovadoras, mi trayectoria incluye el desarrollo de
+              aplicaciones orientadas a redes, específicamente para proveedores
+              de servicios de internet inalámbrico (WISP), así como sistemas de
+              control de ventas e inventarios en tiempo real, además, he
+              trabajado en el sector bancario como consultor externo, donde he
+              abordado temas de vulnerabilidad, actualización y migración,
+              además de trabajar bajo la metodología scrum.
             </p>
           </div>
         </MotionWrapper>

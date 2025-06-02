@@ -1,8 +1,16 @@
 import ThemeToggle from "./ui/theme-toggle";
 import { personalInfo } from "@/lib/data";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  IconBackpack,
+  IconBriefcase,
+  IconMenu2,
+  IconRocket,
+  IconSchool,
+  IconTools,
+  IconX,
+} from "@tabler/icons-react";
 
 export default function GlassHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,27 +26,34 @@ export default function GlassHeader() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          ✨ {personalInfo.name}
+          {personalInfo.name}
         </motion.a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {["experience", "skills", "projects", "awards", "education"].map(
+          {["experiencia", "skills", "proyectos", "educación"].map(
             (item, index) => (
               <motion.a
                 key={item}
                 href={`#${item}`}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
+                className="flex transition-colors hover:text-foreground/80 text-foreground/60"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
                 whileHover={{ y: -2 }}
               >
-                {item === "experience" && "💼 "}
-                {item === "skills" && "🛠️ "}
-                {item === "projects" && "🚀 "}
-                {item === "awards" && "🏆 "}
-                {item === "education" && "🎓 "}
+                {item === "experiencia" && (
+                  <IconBriefcase className="h-5 w-5 mr-1" stroke={1.5} />
+                )}
+                {item === "skills" && (
+                  <IconTools className="h-5 w-5 mr-1" stroke={1.5} />
+                )}
+                {item === "proyectos" && (
+                  <IconRocket className="h-5 w-5 mr-1" stroke={1.5} />
+                )}
+                {item === "educación" && (
+                  <IconSchool className="h-5 w-5 mr-1" stroke={1.5} />
+                )}
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </motion.a>
             )
@@ -55,7 +70,7 @@ export default function GlassHeader() {
             aria-label="Toggle menu"
             whileTap={{ scale: 0.95 }}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
           </motion.button>
         </div>
       </div>
@@ -71,22 +86,29 @@ export default function GlassHeader() {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col space-y-4 text-sm font-medium">
-              {["experience", "skills", "projects", "awards", "education"].map(
+              {["experiencia", "skills", "proyectos", "educación"].map(
                 (item, index) => (
                   <motion.a
                     key={item}
                     href={`#${item}`}
-                    className="transition-colors hover:text-foreground/80 text-foreground/60 py-2"
+                    className="flex transition-colors hover:text-foreground/80 text-foreground/60 py-2"
                     onClick={toggleMenu}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.1 }}
                   >
-                    {item === "experience" && "💼 "}
-                    {item === "skills" && "🛠️ "}
-                    {item === "projects" && "🚀 "}
-                    {item === "awards" && "🏆 "}
-                    {item === "education" && "🎓 "}
+                    {item === "experiencia" && (
+                      <IconBriefcase className="h-5 w-5 mr-1" stroke={1.5} />
+                    )}
+                    {item === "skills" && (
+                      <IconTools className="h-5 w-5 mr-1" stroke={1.5} />
+                    )}
+                    {item === "proyectos" && (
+                      <IconRocket className="h-5 w-5 mr-1" stroke={1.5} />
+                    )}
+                    {item === "educación" && (
+                      <IconBackpack className="h-5 w-5 mr-1" stroke={1.5} />
+                    )}
                     {item.charAt(0).toUpperCase() + item.slice(1)}
                   </motion.a>
                 )

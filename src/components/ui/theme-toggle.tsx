@@ -1,6 +1,6 @@
-import { Moon, Sun } from "lucide-react";
 import { Button } from "./button";
 import { useEffect, useState } from "react";
+import { IconMoon, IconSun } from "@tabler/icons-react";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -26,9 +26,9 @@ export default function ThemeToggle() {
       className="rounded-full cursor-pointer"
     >
       {theme === "light" ? (
-        <Moon className="h-5 w-5" />
+        <IconMoon className="h-5 w-5" />
       ) : (
-        <Sun className="h-5 w-5" />
+        <IconSun className="h-5 w-5" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
