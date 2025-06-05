@@ -50,7 +50,7 @@ export default function ExperienceSection() {
                   </div>
                   <h4 className="text-sm font-medium">Logros clave</h4>
                 </div>
-                <ul className="list-none ml-4 space-y-2 text-sm">
+                <ul className="list-disc ml-4 space-y-2 text-sm">
                   {job.achievements.map((achievement, i) => (
                     <motion.li
                       key={i}

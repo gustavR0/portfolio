@@ -1,21 +1,16 @@
 import { projects } from "@/lib/data";
-import {
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
-import { IconBrandGithub, IconRocket } from "@tabler/icons-react";
+import { IconBrandGithub, IconRocket, IconWorldWww } from "@tabler/icons-react";
 
 export default function ProjectsSection() {
   return (
     <section id="proyectos" className="py-12 relative">
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
-           <h2 className="flex text-2xl font-bold mb-8 text-center md:text-left">
+          <h2 className="flex text-2xl font-bold mb-8 text-center md:text-left">
             <IconRocket className="h-7 w-7 mr-1 pt-1" stroke={1.5} /> Proyectos
           </h2>
         </MotionWrapper>
@@ -45,18 +40,60 @@ export default function ProjectsSection() {
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-blue-500/5 to-sky-500/5">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-sm text-muted-foreground hover:text-blue-500 transition-colors group/link pt-8"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <IconBrandGithub className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
-                    View on GitHub 🔗
-                  </motion.a>
+                <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-blue-500/5 to-sky-500/5 gap-2">
+                  {project.liveDemo && (
+                    <motion.a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-muted-foreground hover:text-blue-500 transition-colors group/link pt-8"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <IconWorldWww className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
+                      Live Demo
+                    </motion.a>
+                  )}
+
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-muted-foreground hover:text-blue-500 transition-colors group/link pt-8"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <IconBrandGithub className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
+                      Frontend
+                    </motion.a>
+                  )}
+                  {project.githubBack && (
+                    <motion.a
+                      href={project.githubBack}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-muted-foreground hover:text-blue-500 transition-colors group/link pt-8"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <IconBrandGithub className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
+                      Backend
+                    </motion.a>
+                  )}
+                  {project.githubRepo && (
+                    <motion.a
+                      href={project.githubRepo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-muted-foreground hover:text-blue-500 transition-colors group/link pt-8"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <IconBrandGithub className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
+                      Repo
+                    </motion.a>
+                  )}
                 </CardFooter>
               </GlassCard>
             </MotionWrapper>

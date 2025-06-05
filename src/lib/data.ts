@@ -1,3 +1,5 @@
+import { desc, title } from "framer-motion/client";
+
 export const personalInfo = {
   name: "Gustavo Romero Oltehua",
   location: "Zongolica, Veracruz, México",
@@ -8,20 +10,31 @@ export const personalInfo = {
 
 export const workExperience = [
   {
-    company: "IDS Comercial",
+    company: "Banamex",
     location: "Remoto",
     position: "Full Stack Developer",
-    period: "Jul 2023 - Presente",
+    period: "Ene 2025 - Presente",
     achievements: [
       "Corregí vulnerabilidades en apps con Angular y Java 8 (Spring boot).",
-      "Refactoricé código legacy y migré de Angular 10 a 17 y Node 16 a 20.",
+      "Refactoricé código legacy y migré de Angular 15 a 17 y Node 18 a 20.",
+      "Resolución de bugs y code smells más de 12 mil issues en SonarQube resueltos en 5 meses para Angular y Java.",
+    ],
+  },
+  {
+    company: "Citibanamex",
+    location: "Remoto",
+    position: "Full Stack Developer",
+    period: "Jul 2023 - Dic 2024",
+    achievements: [
+      "Corregí vulnerabilidades en apps con Angular y Java 8 (Spring boot).",
+      "Refactoricé código legacy y migré de Angular 10 a 15 y Node 16 a 18.",
+      "Lideré investigación e implementación para la migración de node 16 a node 18 por jenkins.",
       "Optimicé procesos: desarrollé herramienta interna que redujo las migraciones de SQL Schema de 3 días a 1 minuto.",
-      "Resolución de code smells (SonarQube) para mejorar la mantenibilidad.",
     ],
   },
   {
     company: "Romegus WISP",
-    location: "Remoto",
+    location: "Freelance",
     position: "Full Stack Developer",
     period: "Ene 2022 - Jun 2023",
     achievements: [
@@ -33,7 +46,7 @@ export const workExperience = [
   },
   {
     company: "Tienda “el paso”",
-    location: "Zongolica, Veracruz, México (Hibrido)",
+    location: "Freelance",
     position: "Full Stack Developer",
     period: "Ene 2021 - Ene 2022",
     achievements: [
@@ -56,7 +69,7 @@ export const workExperience = [
   },
   {
     company: "Romegus WISP",
-    location: "Remoto",
+    location: "Freelance",
     position: "Full Stack Developer",
     period: "Ene 2019 - Feb 2020",
     achievements: [
@@ -119,25 +132,50 @@ export const skills = {
 
 export const projects = [
   {
-    title: "Pendiente",
-    github: "https://github.com/gustavR0",
+    title: "Portfolio personal",
+    github: "https://github.com/gustavR0/portfolio",
     description: [
-      "WiFi-RTT: Developed indoor occupancy tracking for energy optimization.",
-      "IoT Solutions: Implemented smart monitoring for energy efficiency and food waste reduction.",
-      "Real-Time Tracking: Designed systems to monitor carbon emissions and optimize resources.",
-      "Data-Driven Insights: Analyzed user patterns for adaptive energy and food management.",
-      "Reward Integration: Built QR-based green points system to incentivize eco-friendly actions.",
+      "Este es mi portafolio personal, donde muestro mis proyectos y habilidades.",
+      "Está construido con Astro y TypeScript, utilizando Tailwind CSS para el diseño.",
+      "El código está disponible en GitHub.",
+      "Basado en el diseño de portafolio de @rishikesh2003 en github.",
     ],
   },
   {
-    title: "Pendiente",
-    github: "https://github.com/gustavR0",
+    title: "Chat en tiempo real",
+    github: "git@github.com:gustavR0/chat-app.git",
+    githubBack: "git@github.com:gustavR0/server-chat-app.git",
+    liveDemo: "https://chat.gustavro.dev",
     description: [
-      "A holistic mental health app leveraging AI and blockchain for early detection and personalized solutions for depression.",
-      "Features include social media analysis (ML-based sentiment tracking), PHQ-9 assessments, smartwatch integration for sleep and activity data, guided meditation, and smart suggestions for food, travel, music, and movies.",
-      "Developed a rewards system using MAG crypto token on Ethereum, enabling user engagement through in-app incentives.",
-      "Secure storage implemented via web3.storage, IPFS, and FileCoin.",
-      "Built with React, Supabase, Node.js, Flask, and Solidity, showcasing seamless integration of health tech and blockchain.",
+      "Chat app sencillo en tiempo real.",
+      "Implementación de WebSockets para comunicación en tiempo real.",
+      "Uso de socket.io para la gestión de eventos y mensajes.",
+      "Despliegue en Digital Ocean con Docker.",
+      "Código dividido en frontend y backend para una mejor organización.",
+    ],
+  },
+  {
+    title: "Map en tiempo real",
+    github: "https://github.com/gustavR0/Map-App",
+    githubBack: "https://github.com/gustavR0/server-ws-map-app",
+    liveDemo: "https://maps.gustavro.dev",
+    description: [
+      "Mapa interactivo unicamente demostrativo con funcionalidad de poner pin en tiempo real.",
+      "Implementación de WebSockets para comunicación en tiempo real.",
+      "Uso de mapbox para visualización de mapas.",
+      "Despliegue en Digital Ocean con Docker.",
+      "Código dividido en frontend y backend para una mejor organización.",
+    ],
+  },
+  {
+    title: "Creación biblioteca routing en React",
+    githubRepo: "https://github.com/gustavR0/clon-react-router-dom",
+    description: [
+      "Proyecto personal para comprender mejor el funcionamiento de React Router Dom.",
+      "Implementación de rutas anidadas y manejo de parámetros en la URL.",
+      "Soporte para rutas dinámicas y carga diferida de componentes.",
+      "Manejo de errores y redirecciones personalizadas.",
+      "Ejemplo de internalización i18n con rutas.",
     ],
   },
 ];

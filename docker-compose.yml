@@ -9,3 +9,4 @@ services:
       - HOST=0.0.0.0
       - PORT=4321
     command: node ./dist/server/entry.mjs
+    restart: always
