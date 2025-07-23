@@ -1,5 +1,3 @@
-import { desc, title } from "framer-motion/client";
-
 export const personalInfo = {
   name: "Gustavo Romero Oltehua",
   location: "Zongolica, Veracruz, México",
@@ -143,8 +141,8 @@ export const projects = [
   },
   {
     title: "Chat en tiempo real",
-    github: "git@github.com:gustavR0/chat-app.git",
-    githubBack: "git@github.com:gustavR0/server-chat-app.git",
+    github: "https://github.com/gustavR0/chat-app",
+    githubBack: "https://github.com/gustavR0/server-chat-app",
     liveDemo: "https://chat.gustavro.dev",
     description: [
       "Chat app sencillo en tiempo real.",
